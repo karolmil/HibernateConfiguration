@@ -4,13 +4,17 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost/ksiegarnia</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/company</property>
         <property name="hibernate.connection.serverTimezone">UCT</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.useSSL">false</property>
-        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.connection.password">Charles*98</property>
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+        <mapping class = "sda.hibernate.config.User"></mapping>
+        <mapping class = "sda.hibernate.config.Game"></mapping>
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">update</property> -->
     </session-factory>
